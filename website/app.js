@@ -22,3 +22,23 @@ const getData = async (zip_code) =>{
     }
 };
 
+// Function to make a post request to server
+const postData = (url='', data={}) =>{
+    return fetch(url, {
+        method: "POST",
+        header: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(res => {
+        if (!res.ok){
+            throw new Error('response was not ok');
+        }
+        return res.json();
+    })
+    .catch(error => {
+        console.log("Error when posting data", error);
+        throw error;
+    })
+};
