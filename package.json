@@ -1,0 +1,24 @@
+{
+  "name": "weather_journal",
+  "version": "1.0.0",
+  "description": "This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI for a Weather-Journal App.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YousefKullab/Weather_Journal.git"
+  },
+  "author": "Yousef kullab",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YousefKullab/Weather_Journal/issues"
+  },
+  "homepage": "https://github.com/YousefKullab/Weather_Journal#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
