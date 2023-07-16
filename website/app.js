@@ -2,6 +2,8 @@
 api_key = "8d802503a466021106005166936d9817";
 base_url = "https://api.openweathermap.org/data/3.0/onecall";
 
+// API: https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
+
 // Create a new date instance dynamically with JS
 let d = new Date();
 let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
@@ -62,3 +64,31 @@ const updateUI = () =>{
     });
 };
 
+// Callback func when Generate btn is clicked
+const preformAction = () =>{
+    const zip_code = document.getElementById('zip').value;
+    const feelings = document.getElementById('feelings').value;
+
+    getData(zip_code)
+    .then(weather_data =>{
+        const data = {
+            temp: weather_data.main.temp,
+            date: newDate,
+            user_res: feelings
+        };
+        return postData('/addData', data);
+    })
+    .then(res =>{
+        console.log(res);
+        return updateUI();
+    })
+    .catch(error =>{
+        console.log('Error:', error.message);
+    });
+};
+
+// Run app when loaded and click in btn
+document.addEventListener('DOMContentLoaded',()=>{
+    const btn = document.getElementById('generate');
+    btn.addEventListener('click', preformAction);
+});
