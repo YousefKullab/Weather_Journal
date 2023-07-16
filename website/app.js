@@ -40,5 +40,25 @@ const postData = (url='', data={}) =>{
     .catch(error => {
         console.log("Error when posting data", error);
         throw error;
-    })
+    });
 };
+
+// Func to update the UI elements
+const updateUI = () =>{
+    return fetch('/data')
+    .then(res => {
+        if (!res.ok) {
+        throw new Error('Network response was not ok');
+        }
+        return res.json();
+    })  
+    .then(data =>{
+        document.getElementById('date').textContent = `Date: ${data.date}`;
+        document.getElementById('temp').textContent = `Temperature: ${data.temp}`;
+        document.getElementById('content').textContent = `Feelings: ${data.user_res}`;
+    })
+    .catch(error => {
+        console.log('Error updating UI:', error);
+    });
+};
+
