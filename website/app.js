@@ -85,6 +85,12 @@ const  preformAction = () =>{
     })
     .catch(error =>{
         console.log('Error:', error.message);
+        alert('Error: Invalid ZIP code');
+        document.getElementById('zip').value = "";
+        // return empty string if user enter invalid zip code
+        document.getElementById('date').textContent = '';
+        document.getElementById('temp').textContent = '';
+        document.getElementById('content').textContent = '';
     });
 };
 
