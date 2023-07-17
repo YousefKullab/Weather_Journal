@@ -1,6 +1,6 @@
 /* Global Variables */
-// api_key = "YOUR_API_KEY";
-api_key = "8d802503a466021106005166936d9817";
+
+api_key = "YOUR_API_KEY";
 base_url = "https://api.openweathermap.org/data/2.5/weather";
 
 // API: https://api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}&appid={API key}
