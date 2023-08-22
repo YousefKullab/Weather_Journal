@@ -20,7 +20,7 @@ const getData = async (zip_code) =>{
         const data = await res.json();
         return data;
     }catch(error){
-        console.log('Error featch weather data:', error);
+        console.log('Error fetch weather data:', error);
         throw error;
     }
 };
