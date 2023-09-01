@@ -25,8 +25,8 @@ To run this app locally, you need to have the following installed on your machin
 
 ## Installation
 
-- Clone this repository to your local machine using: `git clone git@github.com:YousefKullab/Weather_Journal.git`.
-- Navigate to the project folder: `cd weather-journal-app`.
+- Clone this repository to your local machine using: `git clone git@github.com:yousefkullab/weather-journal.git`.
+- Navigate to the project folder: `cd weather-journal`.
 - Install the required npm packages: `npm install express body-parser cors`.
 - Start the server: `node server.js`.
 - Open your web browser and go to `http://localhost:3000` to access the app.
